@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import HelloWorld from "./components/HelloWorld.vue"
+import { HelloWorld } from "@calm1205/vue-lib"
 import { add } from "@calm1205/vue-lib"
 
 console.log(add(1, 2))
@@ -7,5 +7,4 @@ console.log(add(1, 2))
 
 <template>
   <HelloWorld msg="Vite + Vue" />
-  <HelloWorld2 msg="Vite + Vue" />
 </template>

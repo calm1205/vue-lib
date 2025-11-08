@@ -7,7 +7,6 @@ Vite のライブラリモードと `vite-plugin-dts` により、ES/CJS/UMD の
 
 - Node.js 18+ / npm
 - npm アカウント（npmjs へログイン可能な状態）
-- パッケージ名が npm 上でユニークであること（スコープ利用推奨）
 
 ### ディレクトリ構成のポイント
 
