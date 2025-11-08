@@ -7,12 +7,15 @@ export default defineConfig({
   plugins: [
     vue(),
     dts({
+      include: ["packages"],
+      outDir: "dist",
       insertTypesEntry: true,
+      tsconfigPath: "tsconfig.packages.json",
     }),
   ],
   build: {
     lib: {
-      entry: "src/index.ts",
+      entry: "packages/index.ts",
       formats: ["es"],
       fileName: () => `index.js`,
     },
