@@ -50,7 +50,6 @@ npm pack --dry-run
 5. 公開
 
 ```bash
-# スコープなしパッケージ
 npm publish
 
 # スコープ付き（初回は public 指定が必要）
@@ -60,9 +59,7 @@ npm publish --access public
 6. 次回以降のリリース運用
 
 ```bash
-# バージョンを上げる（例: パッチリリース）
 npm version patch
-# もしくは minor / major
 npm version minor
 npm version major
 
@@ -89,18 +86,10 @@ npm i ../vue-lib/vue-lib-0.1.0.tgz
 ```ts
 // ESM import（利用側プロジェクト）
 import { HelloWorld } from "vue-lib"
-
-// プラグインとしてグローバル登録
-import VueLib from "vue-lib"
-app.use(VueLib)
 ```
 
 ### 注意点
 
 - このライブラリは `vue@^3` を peer dependency として要求します（利用側で `vue` をインストールしてください）。
-- `exports` により `dist/` 直読みは想定していません。`import 'vue-lib'` で読み込んでください。
+- `exports` により `dist/` 直読みは想定していません。`import 'calm1205/vue-lib'` で読み込んでください。
 - 公開内容は `files: ["dist"]` で限定されています。必要なファイルが `dist` に含まれているか `npm pack --dry-run` で確認してください。
-
-### ライセンス
-
-- 適切なライセンスを `package.json` およびリポジトリに設定してください（例: MIT）。
