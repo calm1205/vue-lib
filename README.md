@@ -1,7 +1,6 @@
 ## vue-lib
 
-Vue 3 向けのコンポーネントライブラリを想定した構成です。
-Vite のライブラリモードと `vite-plugin-dts` により、ES/CJS/UMD のビルドおよび型定義を出力します。
+Vue component library
 
 ### 前提条件
 
