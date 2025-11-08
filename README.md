@@ -2,20 +2,13 @@
 
 Vue component library
 
-### 前提条件
+### setup
 
-- Node.js 18+ / npm
-- npm アカウント（npmjs へログイン可能な状態）
-
-### ディレクトリ構成のポイント
-
-- エントリ: `src/index.ts`（コンポーネントのエクスポートと `install` を提供）
-- ビルド出力: `dist/`
-- 公開設定（`package.json`）
-  - `main`/`module`/`types`/`exports` が `dist/` を指す
-  - `files: ["dist"]` で配布物を制限
-  - `peerDependencies: { "vue": "^3.5.0" }`
-  - `prepublishOnly: "npm run build"`
+```bash
+$ brew install direnv
+$ cp .envrc.dev .envrc
+$ direnv allow
+```
 
 ### 公開までの手順
 
