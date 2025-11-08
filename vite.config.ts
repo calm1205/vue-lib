@@ -14,7 +14,7 @@ export default defineConfig({
     lib: {
       entry: "src/index.ts",
       formats: ["es"],
-      fileName: () => `index.es.js`,
+      fileName: () => `index.js`,
     },
     rollupOptions: {
       external: ["vue"],
