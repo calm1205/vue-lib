@@ -8,6 +8,9 @@
     "type": "git",
     "url": "git+https://github.com/calm1205/vue-lib.git"
   },
+  "engines": {
+    "node": ">=24.0.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
