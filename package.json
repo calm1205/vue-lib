@@ -14,7 +14,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "test": "vitest run"
+    "test": "vitest run",
+    "type-check": "vue-tsc -b"
   },
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
