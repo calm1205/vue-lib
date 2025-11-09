@@ -29,7 +29,7 @@ jobs:
           echo "BRANCH_NAME=${GITHUB_REF_NAME//\//-}" >> "$GITHUB_ENV"
 
       - name: Update beta version
-        run: npm version prerelease --preid=${{ env.BRANCH_NAME }} --no-git-tag-version
+        run: npm version prerelease --preid=${{ env.BRANCH_NAME }}-$(date +%Y%m%d%H%M%S) --no-git-tag-version
 
       - name: Publish to npm
-        run: npm publish --tag ${{ env.BRANCH_NAME }}
+        run: npm publish --tag prerelease
