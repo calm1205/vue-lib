@@ -27,12 +27,12 @@
     "registry": "https://npm.pkg.github.com"
   },
   "peerDependencies": {
-    "vue": "^3.5.0",
+    "@ark-ui/vue": "^5.27.1",
     "tailwindcss": "^4.1.17",
-    "@ark-ui/vue": "^5.27.1"
+    "vue": "^3.5.0"
   },
   "devDependencies": {
-    "@calm1205/vue-lib": "^0.1.7",
+    "@calm1205/vue-lib": "^0.1.8",
     "@tailwindcss/vite": "^4.1.17",
     "@types/node": "^24.6.0",
     "@vitejs/plugin-vue": "^6.0.1",
