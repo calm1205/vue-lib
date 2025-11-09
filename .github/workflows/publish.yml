@@ -45,12 +45,12 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Push version
+        run: git push --follow-tags
+
       - name: Publish to npm
         run: |
           npm publish --tag latest
-
-      - name: Push version
-        run: git push --follow-tags
 
       - name: Resolve tag
         id: tags
