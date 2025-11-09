@@ -45,6 +45,10 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Set up push with GITHUB_TOKEN
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+
       - name: Push version
         run: git push --follow-tags
 
