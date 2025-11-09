@@ -25,7 +25,7 @@ jobs:
         run: npm ci
 
       - name: Set branch name
-        run: echo "BRANCH_NAME=${{ github.ref_name//\//- }}" >> $GITHUB_ENV
+        run: echo "BRANCH_NAME=${{ replace(github.ref_name, '/', '-') }}" >> $GITHUB_ENV
 
       - name: Update beta version
         run: npm version prerelease --preid=${{ env.BRANCH_NAME }} --no-git-tag-version
