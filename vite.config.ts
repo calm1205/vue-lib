@@ -10,6 +10,7 @@ export default defineConfig({
     tailwindcss(),
     dts({
       include: ["packages"],
+      exclude: ["packages/**/*.test.ts"],
       outDir: "dist",
       insertTypesEntry: true,
       tsconfigPath: "tsconfig.packages.json",
