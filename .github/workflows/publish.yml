@@ -2,6 +2,16 @@ name: Publish npm package
 
 on:
   workflow_dispatch:
+    inputs:
+      release_type:
+        description: Select version bump (patch/minor/major)
+        required: true
+        default: patch
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
 
 jobs:
   publish:
@@ -24,9 +34,29 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Update version
+        run: npm version ${{ inputs.release_type }}
+
       - name: Build
         run: npm run build
 
       - name: Publish to npm
         run: |
           npm publish --tag latest
+
+      - name: Push version
+        run: git push --follow-tags
+
+      - name: Resolve tag
+        id: tags
+        run: |
+          VERSION=$(npm pkg get version | tr -d '"')
+          echo "tag=v$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ steps.tags.outputs.tag }}
+          name: ${{ steps.tags.outputs.tag }}
+          generate_release_notes: true
