@@ -6,9 +6,6 @@ on:
       tag:
         description: Tag to release (omit to use latest tag)
         required: false
-  push:
-    tags:
-      - 'v*'
 
 permissions:
   contents: write

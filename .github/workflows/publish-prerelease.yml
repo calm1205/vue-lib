@@ -1,0 +1,28 @@
+name: Publish prerelease
+
+on:
+  workflow_dispatch:
+
+jobs:
+  prerelease:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org/
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Update beta version
+        run: npm version prerelease --preid=beta --no-git-tag-version
+
+      - name: Publish to npm
+        run: npm publish --tag beta
