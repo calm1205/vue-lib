@@ -19,6 +19,7 @@ export default defineConfig({
     lib: {
       entry: "packages/index.ts",
       formats: ["es"],
+      fileName: "index",
     },
     rollupOptions: {
       external: ["vue", "tailwindcss", "@ark-ui/vue"],
