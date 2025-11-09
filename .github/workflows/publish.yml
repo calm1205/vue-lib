@@ -33,4 +33,4 @@ jobs:
 
       - name: Publish to npm
         run: |
-          npm publish --provenance
+          npm publish --provenance --tag latest
