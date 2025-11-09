@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   publish:
-    name: Build and publish npm package
+    name: Publish npm package
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
