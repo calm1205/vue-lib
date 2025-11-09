@@ -9,6 +9,7 @@
     "rootDir": "packages",
     "outDir": "dist",
     "noEmit": false,
+    "allowImportingTsExtensions": false,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
