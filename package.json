@@ -1,7 +1,7 @@
 {
   "name": "@calm1205/vue-lib",
   "private": false,
-  "version": "0.1.10",
+  "version": "0.1.11",
   "type": "module",
   "description": "Vue component library",
   "repository": "github:calm1205/vue-lib",
