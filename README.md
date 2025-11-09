@@ -18,10 +18,6 @@ $ direnv allow
 ## publish
 
 ```bash
-npm pack --dry-run
-```
-
-```bash
 npm version patch
 npm version minor
 npm version major
