@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NODE_AUTH_TOKEN: ${{ secrets.NPM_SCOPED_TOKEN }}
+      BRANCH_NAME: ${{ replace(github.ref_name , '/', '-') }}
 
     steps:
       - name: Checkout
@@ -24,8 +25,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Set branch name
-        run: echo "BRANCH_NAME=${{ replace(github.ref_name , '/', '-') }}" >> $GITHUB_ENV
+      # - name: Set branch name
+      #   run: echo "BRANCH_NAME=${{ replace(github.ref_name , '/', '-') }}" >> $GITHUB_ENV
 
       - name: Update beta version
         run: npm version prerelease --preid=${{ env.BRANCH_NAME }} --no-git-tag-version
