@@ -6,7 +6,6 @@
 
     /* Linting */
     "strict": true,
-    "rootDir": "dev",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
