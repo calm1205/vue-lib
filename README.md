@@ -10,6 +10,8 @@ $ cp .envrc.dev .envrc
 $ direnv allow
 ```
 
+## publish
+
 ```bash
 npm pack --dry-run
 ```

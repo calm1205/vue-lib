@@ -1,4 +1,4 @@
-import { defineConfig } from "vite"
+import { defineConfig } from "vitest/config"
 import vue from "@vitejs/plugin-vue"
 import tailwindcss from "@tailwindcss/vite"
 import dts from "vite-plugin-dts"
@@ -19,10 +19,15 @@ export default defineConfig({
     lib: {
       entry: "packages/index.ts",
       formats: ["es"],
-      fileName: () => `index.js`,
     },
     rollupOptions: {
       external: ["vue", "tailwindcss", "@ark-ui/vue"],
     },
+  },
+  test: {
+    globals: true,
+    environment: "jsdom",
+    include: ["packages/**/*.test.ts"],
+    reporters: ["dot"],
   },
 })
