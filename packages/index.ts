@@ -1,5 +1,6 @@
 import HelloWorld from "./components/HelloWorld.vue"
 import Accordion from "./components/Accordion.vue"
+import VueIcon from "./components/VueIcon.vue"
 import { add } from "./libs/add"
 
 /**
@@ -7,4 +8,5 @@ import { add } from "./libs/add"
  */
 export { HelloWorld }
 export { Accordion }
+export { VueIcon }
 export { add }
