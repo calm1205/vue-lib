@@ -69,6 +69,6 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ steps.tags.outputs.tag }}
+          tag_name: ${{ steps.tags.outputs.tag }}
           name: ${{ steps.tags.outputs.tag }}
           generate_release_notes: true
