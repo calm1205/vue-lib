@@ -10,6 +10,11 @@ $ cp .envrc.dev .envrc
 $ direnv allow
 ```
 
+## dir
+
+- dev: 開発時の動作確認用ディレクトリ
+- packages: npm package の配信対象
+
 ## publish
 
 ```bash
@@ -22,11 +27,7 @@ npm version minor
 npm version major
 ```
 
-```bash
-npm publish
-```
-
-（任意）Git タグ/リリースノートを運用する場合は、`npm version` で作成されたタグを push してください。
+development -> main へ merge で github action で publish
 
 ### ローカルでの動作確認（任意）
 

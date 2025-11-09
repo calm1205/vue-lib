@@ -1,14 +1,18 @@
 <script setup lang="ts">
-import { HelloWorld } from "@calm1205/vue-lib"
-import { Accordion as ImportedAccordion } from "@calm1205/vue-lib"
-import { VueIcon } from "@calm1205/vue-lib"
-import { add } from "@calm1205/vue-lib"
+import { HelloWorld } from "../packages/index.ts"
+import { Accordion as ImportedAccordion } from "../packages/index.ts"
+import { VueIcon } from "../packages/index.ts"
+import { add } from "../packages/index.ts"
 
 console.log(add(1, 2))
 </script>
 
 <template>
-  <HelloWorld msg="Vite + Vue" />
-  <ImportedAccordion />
-  <VueIcon />
+  <main class="p-4">
+    <div class="flex items-center gap-4">
+      <VueIcon />
+      <HelloWorld msg="Vite + Vue" />
+    </div>
+    <ImportedAccordion />
+  </main>
 </template>

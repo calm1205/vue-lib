@@ -1,7 +1,7 @@
 {
   "name": "@calm1205/vue-lib",
   "private": false,
-  "version": "0.1.15",
+  "version": "0.1.16",
   "type": "module",
   "description": "Vue component library",
   "repository": {
@@ -14,7 +14,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "test": "vitest run"
+    "test": "vitest run",
+    "type-check": "vue-tsc -b"
   },
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -37,7 +38,6 @@
     "vue": "^3.5.0"
   },
   "devDependencies": {
-    "@calm1205/vue-lib": "^0.1.15",
     "@tailwindcss/vite": "^4.1.17",
     "@types/node": "^24.6.0",
     "@vitejs/plugin-vue": "^6.0.1",
