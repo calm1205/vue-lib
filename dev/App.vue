@@ -8,7 +8,11 @@ console.log(add(1, 2))
 </script>
 
 <template>
-  <HelloWorld msg="Vite + Vue" />
-  <ImportedAccordion />
-  <VueIcon />
+  <main class="p-4">
+    <div class="flex items-center gap-4">
+      <VueIcon />
+      <HelloWorld msg="Vite + Vue" />
+    </div>
+    <ImportedAccordion />
+  </main>
 </template>
