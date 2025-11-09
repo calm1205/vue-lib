@@ -1,3 +1,5 @@
+name: Publish npm package prerelease
+
 on:
   workflow_dispatch:
 
