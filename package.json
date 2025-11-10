@@ -13,7 +13,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build && cp packages/style.css dist/style.css",
+    "build": "vite build && cp packages/variables.css dist/variables.css",
     "test": "vitest run",
     "type-check": "vue-tsc -b"
   },
@@ -23,7 +23,7 @@
     "./components": "./dist/components.js",
     "./libs": "./dist/libs.js",
     "./stores": "./dist/stores.js",
-    "./style.css": "./dist/style.css"
+    "./variables.css": "./dist/variables.css"
   },
   "files": [
     "dist"
