@@ -21,6 +21,8 @@ $ npm install @calm1205/vue-lib
 ```bash
 $ brew install direnv
 $ cp .envrc.dev .envrc
+$ cp dev/App.template.vue dev/App.vue
+$ cp dev/main.template.ts dev/main.ts
 $ direnv allow
 ```
 
