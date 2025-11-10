@@ -23,6 +23,7 @@
     "./components": "./dist/components.js",
     "./libs": "./dist/libs.js",
     "./stores": "./dist/stores.js",
+    "./style.css": "./dist/vue-lib.css",
     "./variables.css": "./dist/variables.css"
   },
   "files": [
