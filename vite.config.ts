@@ -5,6 +5,9 @@ import dts from "vite-plugin-dts"
 
 // https://vite.dev/config/
 export default defineConfig({
+  server: {
+    port: 9999,
+  },
   plugins: [
     vue(),
     tailwindcss(),
