@@ -23,7 +23,7 @@
     "./components": "./dist/components.js",
     "./libs": "./dist/libs.js",
     "./stores": "./dist/stores.js",
-    "./style": "./dist/style.css"
+    "./style": "./packages/style.css"
   },
   "files": [
     "dist"
