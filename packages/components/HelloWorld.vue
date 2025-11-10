@@ -3,5 +3,5 @@ defineProps<{ msg: string }>()
 </script>
 
 <template>
-  <h1 class="text-3xl font-bold">{{ msg }}</h1>
+  <h1 class="text-3xl p-2xl font-bold">{{ msg }}</h1>
 </template>
