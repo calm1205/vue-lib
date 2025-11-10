@@ -23,7 +23,7 @@ export default defineConfig({
       fileName: "index",
     },
     rollupOptions: {
-      external: ["vue", "tailwindcss", "@ark-ui/vue"],
+      external: ["vue", "tailwindcss", "@ark-ui/vue", "pinia"],
     },
   },
   test: {
