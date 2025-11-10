@@ -18,9 +18,13 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: "packages/index.ts",
+      entry: {
+        components: "packages/components/index.ts",
+        libs: "packages/libs/index.ts",
+        stores: "packages/stores/index.ts",
+      },
       formats: ["es"],
-      fileName: "index",
+      fileName: (_format, entryName) => `${entryName}.js`,
     },
     rollupOptions: {
       external: ["vue", "tailwindcss", "@ark-ui/vue", "pinia"],
