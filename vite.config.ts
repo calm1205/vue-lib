@@ -25,6 +25,7 @@ export default defineConfig({
     rollupOptions: {
       external: ["vue", "tailwindcss", "@ark-ui/vue", "pinia"],
     },
+    sourcemap: true,
   },
   test: {
     globals: true,
