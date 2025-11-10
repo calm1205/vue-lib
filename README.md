@@ -2,6 +2,20 @@
 
 Vue component library
 
+## to user
+
+```bash
+$ npm install @calm1205/vue-lib
+```
+
+- peerDependency
+  - vue
+  - tailwindcss
+  - ark-ui
+  - pinia
+
+## to developer
+
 ### setup
 
 ```bash
@@ -10,12 +24,12 @@ $ cp .envrc.dev .envrc
 $ direnv allow
 ```
 
-## dir
+### dir
 
 - dev: 開発時の動作確認用ディレクトリ
 - packages: npm package の配信対象
 
-## dev
+## development
 
 1. 任意のブランチで機能開発
 2. github workflow の publish-prerelease を kick
