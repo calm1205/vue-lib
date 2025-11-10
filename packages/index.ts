@@ -1,16 +1,17 @@
-import HelloWorld from "./components/HelloWorld.vue"
-import Accordion from "./components/Accordion.vue"
-import VueIcon from "./components/VueIcon.vue"
-
-import { add } from "./libs/add"
-
-export { default as vueLogo } from "./assets/vue.svg"
-
 /**
  * ここでexportしたものがpublish対象
  */
-export { HelloWorld }
-export { Accordion }
-export { VueIcon }
 
-export { add }
+// svg
+export { default as vueLogo } from "./assets/vue.svg"
+
+// components
+export { default as HelloWorld } from "./components/HelloWorld.vue"
+export { default as Accordion } from "./components/Accordion.vue"
+export { default as VueIcon } from "./components/VueIcon.vue"
+
+// libs
+export { add } from "./libs/add"
+
+// stores
+export { useUserStore } from "./stores/userStore"
