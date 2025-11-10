@@ -13,5 +13,5 @@
     "noUncheckedSideEffectImports": true
   },
   "include": ["dev/**/*.ts", "dev/**/*.vue"],
-  "exclude": ["dev/main.template.ts"]
+  "exclude": ["dev/main.template.ts", "dev/App.template.vue"]
 }

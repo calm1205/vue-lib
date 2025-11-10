@@ -29,7 +29,7 @@ export default defineConfig({
       formats: ["es"],
     },
     rollupOptions: {
-      external: ["vue", "tailwindcss", "@ark-ui/vue", "pinia"],
+      external: ["vue", "@ark-ui/vue", "pinia"],
     },
     sourcemap: true,
   },
