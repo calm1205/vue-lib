@@ -1,5 +1,14 @@
 name: Publish npm package
 
+# npm packageのpublishを行うworkflow
+
+# 以下を実行する
+# 1. バージョンを更新
+# 2. ビルド
+# 3. バージョンタグをpush
+# 4. Github Packagesにpublish
+# 5. Github上にリリースを作成
+
 on:
   workflow_dispatch:
     inputs:

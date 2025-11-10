@@ -24,22 +24,25 @@ $ cp .envrc.dev .envrc
 $ direnv allow
 ```
 
-### dir
+### development
 
-- dev: 開発時の動作確認用ディレクトリ
-- packages: npm package の配信対象
-
-## development
-
-1. 任意のブランチで機能開発
-2. github workflow の publish-prerelease を kick
-3. サービス側で prerelease の version を install して動作確認
+1. 任意のブランチで/packages 配下で機能開発
+2. 必要であれば dev/App.vue 等で動作確認
+3. remote branch へ push 後、github workflow の publish-prerelease を kick
+   a. publish-prerelease を kick すると<version>-<branch-name>-<timestamp>というプレリリースができる。
+4. サービス側で prerelease の version を install して動作確認
 
 ```bash
 # e.g.
 $ npm install @calm1205/vue-lib@0.1.17-development-20251109085744.0
 ```
 
-## publish
+### publish
 
 github workflow の publish を kick
+
+以下が実施されます。
+
+1. npm package のバージョン更新
+2. npm package を Github Packages へリリース
+3. Github 上の release を作成
